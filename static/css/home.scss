@@ -1,0 +1,843 @@
+$font-color: #FFF;
+$btn-color: #1847de;
+
+@mixin glypSize {
+    .glyphicon {
+        font-size: .28rem;
+    }
+}
+
+@mixin pWeight {
+    p {
+        font-weight: 500;
+    }
+}
+
+@mixin btnStyle {
+    .pu_button {
+        vertical-align: text-top;
+        font-size: .16rem;
+        border-radius: .02rem;
+
+        &:hover {
+            color: $font-color;
+        }
+    }
+}
+
+/* 公共样式 */
+.muted {
+    font-size: 0.14rem;
+}
+
+figure {
+    background: url('../image/shape-one.png');
+    padding: .3rem .68rem .3rem .1rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+label,
+input[type=button],
+input[type=submit],
+button {
+    cursor: pointer;
+}
+
+.glyphicon {
+    font-size: .4rem;
+    color: $btn-color;
+}
+
+.foo_tit {
+    width: 2.2rem;
+    margin: 0 auto;
+    display: block;
+
+    p {
+        font-size: .4rem;
+        line-height: .35rem;
+    }
+
+    span {
+        color: $btn-color;
+        font-size: .6rem;
+    }
+}
+
+.pu_wrapper {
+    /* 不同分辨率宽度不同 */
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.pu_background {
+    /* 背景图样式 */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pu_button {
+    /* 按钮的颜色 */
+    background: $btn-color;
+    border-radius: 0.05rem;
+    color: $font-color;
+    padding: 0.1rem 0.25rem 0.15rem;
+    display: inline-block;
+    font-family: sofia-pro, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.001rem;
+    font-size: 0.14rem;
+}
+
+.pu_flex {
+    display: flex;
+    justify-content: center;
+}
+
+.pu_flex_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pu_float {
+    /* 背景图浮动动画 */
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.cbp_menu_push {
+    transition: all .3s ease;
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+
+/* Header */
+header {
+    position: absolute;
+    top: 0.55rem;
+    left: 0;
+    width: 100%;
+
+    .navbar-default {
+        background: none;
+        border: none;
+        font-size: 0.14rem;
+
+        .navbar-nav>li>a {
+            color: $font-color;
+            font-weight: 600;
+            font-size: .14rem;
+            padding: .1rem .2rem;
+            letter-spacing: .001rem;
+
+            &:hover,
+            &:focus {
+                color: $font-color;
+            }
+
+            &.pu_button {
+                background: $btn-color;
+            }
+        }
+
+        .navbar-brand {
+            background: none;
+            border: none;
+            color: $font-color;
+            font-size: 0.35rem;
+
+            // &:hover {
+            //     color: yellow;
+            // }
+        }
+
+        .foo_tit {
+            position: relative;
+            display: block;
+            margin-top: -.5rem;
+            margin-left: -.4rem;
+
+            p {
+                color: $font-color;
+                font-weight: 600;
+                font-size: .32rem;
+                line-height: .26rem;
+            }
+        }
+    }
+}
+
+.pu_home {
+    .pu_wrapper {
+        position: absolute;
+        left: 0;
+        top: 1.6rem;
+        right: 0;
+    }
+
+    .pu_flex {
+        align-items: center;
+        justify-content: space-between;
+
+        .ho_left {
+            font-size: 0; // 保证元素垂直居中
+        }
+    }
+
+    .le_h {
+        width: 80%;
+        font-size: .48rem;
+        font-weight: 600;
+        line-height: 0.49rem;
+        color: $font-color;
+
+        .ti-cursor {
+            color: $btn-color !important;
+        }
+    }
+
+    .le_p {
+        font-size: 0.15rem;
+        line-height: 0.26rem;
+        margin: .1rem 0 .2rem;
+        width: 78%;
+        font-weight: 500;
+        letter-spacing: .006rem;
+    }
+
+    .pu_button {
+        font-size: 0.14rem;
+        vertical-align: text-top;
+    }
+
+    .pu_float {
+        img {
+            top: .3rem;
+            right: -.4rem;
+            position: relative;
+        }
+    }
+}
+
+/* CONTANT */
+.who-we-are {
+    .row {
+        padding-top: .6rem;
+    }
+
+    figure {
+        img {
+            box-shadow: 3px 7px 51px -15px rgba(44, 65, 148, 1);
+            background-position: center;
+            box-sizing: border-box;
+        }
+    }
+
+    @include glypSize;
+
+    .rt_mag {
+        margin-top: -.6rem;
+    }
+
+    h2 {
+        letter-spacing: -.015rem;
+        margin-bottom: .1rem;
+    }
+
+    p {
+        letter-spacing: .0065rem;
+        font-weight: 500;
+        margin-bottom: .1rem;
+        max-width: 92%;
+    }
+}
+
+.services {
+    .row {
+        /* 强制换行 */
+        display: flex;
+        flex-wrap: wrap;
+        @include glypSize;
+        @include pWeight;
+
+        h2 {
+            font-size: .18rem;
+            font-weight: 1000;
+        }
+    }
+}
+
+.protfolio {
+    padding-top: 1.3rem;
+
+    .pu_wrapper {
+        @include pWeight;
+
+        h2 {
+            // font-size: .3rem;
+            // font-weight: 1000;
+        }
+    }
+
+    .prot_gallery {
+        width: 100%;
+        height: 300px;
+        padding-top: .5rem;
+    }
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    margin-right: 10px !important;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.contact {
+    padding-top: 1rem;
+    @include glypSize;
+    @include pWeight;
+
+    .form {
+        width: 100%;
+        background: $font-color;
+        padding: .6rem .5rem 0;
+        box-sizing: border-box;
+        box-shadow: .03rem .07rem .51rem -.15rem rgba(44, 65, 148, 0.4);
+        @include btnStyle;
+
+        .form_input {
+            margin-bottom: .2rem;
+
+            label {
+                font-size: 0.14rem;
+                width: 100%;
+                font-family: sofia-pro, sans-serif;
+                font-weight: 600;
+                display: block;
+                margin-bottom: .05rem;
+            }
+
+            .input,
+            textarea {
+                display: block;
+                font-size: 0.14rem;
+                width: 100%;
+                border: 0;
+                border-bottom: 0.01rem solid #d9d9d9;
+                min-height: .24rem;
+            }
+        }
+    }
+
+    h2 {
+        max-width: 90%;
+        margin-bottom: .2rem;
+    }
+
+    p {
+        margin-bottom: .2rem;
+        max-width: 78%;
+    }
+
+    .p_col {
+        color: #323232;
+        font-weight: 600;
+
+        i {
+            color: #323232;
+            font-size: .16rem;
+            vertical-align: middle;
+            padding-right: .03rem;
+        }
+    }
+}
+
+.pu_coupon {
+    background: #161616;
+    border-radius: .19rem;
+    padding: .4rem .5rem 0;
+    box-sizing: border-box;
+    align-items: center;
+    max-width: 92%;
+    margin: .7rem auto 0;
+    @include btnStyle;
+
+    h3 {
+        font-size: 0.32rem;
+        color: $font-color;
+        margin-bottom: .2rem;
+        line-height: .24rem;
+
+        span {
+            color: $btn-color;
+            padding-left: .1rem;
+        }
+    }
+
+    img {
+        position: absolute;
+        width: 6rem;
+        top: -1.9rem;
+        left: -.3rem;
+    }
+}
+
+footer,
+.contact {
+    a:hover {
+        color: $btn-color;
+        transition: all .4s ease;
+        text-decoration: none;
+    }
+}
+
+footer {
+    position: relative;
+    overflow: hidden;
+
+    .foo_tit {
+        p {
+            font-weight: 600;
+            font-size: .34rem;
+            line-height: .28rem;
+        }
+    }
+
+    .pu_wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 2.5rem 0 0;
+
+        p {
+            color: $font-color;
+            font-weight: 600;
+        }
+
+        .row {
+            max-width: 12rem;
+            margin: .45rem auto 0;
+        }
+    }
+
+    .pu_background {
+        position: relative;
+        bottom: -.8rem;
+        z-index: -1;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    body {
+        overflow: hidden;
+    }
+
+    header .navbar-default {
+        .foo_tit {
+            margin-left: -.2rem;
+        }
+    }
+
+    .pu_wrapper {
+        width: 1100px;
+        top: 1.2rem;
+    }
+
+    .pu_home {
+        .pu_flex .ho_left {
+            padding-left: 50px;
+        }
+
+        .le_h {
+            font-size: .4rem;
+            line-height: .42rem;
+        }
+
+        .pu_float img {
+            top: .2rem;
+            right: .2rem;
+        }
+    }
+
+    h2 {
+        font-size: .32rem;
+        line-height: .36rem;
+    }
+
+    .contact {
+        .row {
+            font-size: 0;
+
+            .glyphicon {
+                padding-bottom: .2rem;
+            }
+        }
+    }
+
+    footer {
+        .pu_wrapper {
+            padding: 2rem 0 0;
+
+            .row {
+                max-width: 9.2rem;
+                margin: .38rem auto 0;
+            }
+        }
+
+        .foo_tit p {
+            font-size: .28rem;
+            line-height: .2rem;
+        }
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .pu_wrapper {
+        width: 90%;
+    }
+
+    .pu_home {
+        .le_h {
+            font-size: .34rem;
+            line-height: .36rem;
+        }
+    }
+
+    .who-we-are {
+        figure {
+            padding: .7rem .68rem .3rem .1rem;
+        }
+    }
+
+    .protfolio .prot_gallery {
+        height: 2.6rem;
+    }
+    footer {
+        .pu_wrapper {
+            padding: 1.32rem 0 0;
+        }
+
+        .pu_background {
+            bottom: -.32rem;
+        }
+    }
+}
+
+@media all and (max-width: 900px) {
+    .pu_wrapper {
+        width: 90%;
+    }
+
+    .pu_home {
+        .le_h {
+            font-size: .28rem;
+            line-height: .3rem;
+        }
+
+        .le_p {
+            line-height: .2rem;
+            letter-spacing: .002rem;
+        }
+
+        .pu_background {
+            z-index: -1;
+            width: 130%;
+        }
+    }
+
+    h2 {
+        font-size: .26rem;
+        line-height: .28rem;
+    }
+
+    header .navbar-default {
+        .navbar-nav>li>a {
+            font-size: .13rem;
+            padding: .1rem .1rem;
+        }
+    }
+
+    .who-we-are {
+        figure {
+            padding: .7rem .68rem .3rem .1rem;
+        }
+
+        p {
+            letter-spacing: .0005rem;
+        }
+    }
+
+    .protfolio {
+        h2 {
+            padding-bottom: .05rem;
+        }
+
+        .prot_gallery {
+            padding-top: 0;
+            height: 2.3rem;
+        }
+    }
+
+    .contact {
+        figure {
+            padding: 0;
+
+            form {
+                padding: 0 0 .4rem 0;
+            }
+        }
+
+        .row {
+            p {
+                max-width: 85%;
+                margin-bottom: .1rem;
+
+                .glyphicon {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .pu_coupon {
+        padding: .3rem .1rem;
+
+        h3 {
+            font-size: .24rem;
+            line-height: .26rem;
+        }
+
+        img {
+            width: 3.6rem;
+            top: -.9rem;
+            left: 0;
+        }
+
+        &>div {
+            font-size: 0;
+        }
+    }
+
+    footer {
+        .pu_wrapper {
+            padding: .8rem 0 0;
+
+            .row {
+                max-width: 6.5rem;
+                margin: .24rem auto 0;
+            }
+        }
+
+        .pu_background {
+            bottom: -.14rem;
+        }
+
+        .foo_tit {
+            p {
+                font-size: .2rem;
+                line-height: .22rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    header {
+        .navbar-collapse {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .navbar-header {
+            width: calc(100% - 1.03rem);
+        }
+
+        .navbar-default {
+
+            .navbar-collapse,
+            .navbar-form {
+                z-index: 100;
+                border-color: $btn-color;
+                margin-top: -.2rem;
+            }
+
+            .navbar-toggle {
+                margin-top: -.2rem;
+                border-color: $btn-color;
+
+                &:focus,
+                &:hover {
+                    background: $btn-color;
+                }
+
+                .icon-bar {
+                    background-color: $font-color;
+                }
+            }
+        }
+    }
+
+    .pu_home {
+        .le_h {
+            font-size: .22rem;
+            line-height: .24rem;
+            width: 100%;
+        }
+
+        .le_p {
+            width: 100%;
+        }
+
+        .pu_background {
+            width: 150%;
+        }
+    }
+    .protfolio {
+        .prot_gallery {
+            height: 2rem;
+        }
+    }
+}
+
+@media all and (max-width: 600px) {
+    .pu_home {
+        .pu_flex {
+            flex-wrap: wrap;
+        }
+
+        .pu_background {
+            width: 264%;
+        }
+
+        .le_h {
+            font-size: .32rem;
+            line-height: .34rem;
+            width: 68%;
+        }
+
+        .le_p {
+            width: 94%;
+        }
+
+        .pu_wrapper {
+            top: 1.4rem;
+        }
+
+        .pu_float {
+            img {
+                right: .1rem;
+                top: .5rem;
+            }
+        }
+    }
+
+    .who-we-are {
+        h2 {
+            width: 70%;
+        }
+
+        p {
+            width: 84%;
+        }
+        .row {
+            padding-top: 2rem;
+        }
+    }
+
+    .services {
+        p {
+            width: 92%;
+        }
+    }
+
+    .protfolio {
+        .prot_gallery {
+            height: 1.8rem;
+        }
+    }
+
+    .contact {
+        padding-top: .5rem;
+
+        .row {
+            flex-wrap: wrap; // 强行换行
+
+            div>.glyphicon {
+                padding-top: .5rem;
+            }
+
+            p {
+                max-width: 75%;
+            }
+        }
+
+        h2 {
+            width: 60%;
+        }
+    }
+
+    .pu_coupon {
+        padding: .4rem .1rem 1.8rem;
+        flex-wrap: wrap;
+
+        img {
+            top: .1rem;
+            left: -.3rem;
+        }
+    }
+
+    footer {
+        .pu_background {
+            width: 200%;
+            left: -1.8rem;
+        }
+        .pu_wrapper {
+            .row {
+                flex-wrap: wrap;
+                max-width: 2rem;
+                justify-content: center;
+            }
+        }
+    }
+}
