@@ -1,6 +1,5 @@
-# webPractice
-This is responsive page, there are a lot of animation effects inside.
-===
+#### webPractice
+This is responsive page, there are a lot of animation effects inside.<br>
 一、主要实现，通过媒体查询@media 和自适应单位rem
 ---
 1、css主要利用sass预编译，所以先安装sass，然后sass基于Ruby，<br>
@@ -8,7 +7,11 @@ This is responsive page, there are a lot of animation effects inside.
 
 二、最终网站布局格式如下，不同分辨率不同
 ---
-![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_1.png)
+![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_1.png)<br>
+![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_2.png)<br>
+![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_3.png)<br>
+![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_4.png)<br>
+![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_5.png)<br>
 三、布局运用Bootstrap框架+jQuery
 ---
 四、对应的动画插件有AOS.js、TypeIt.js、fancybox.js、Swiper.js等
