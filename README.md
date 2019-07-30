@@ -1,5 +1,5 @@
-#### webPractice
-This is responsive page, there are a lot of animation effects inside.<br>
+## webPractice
+### This is responsive page, there are a lot of animation effects inside.<br>
 一、主要实现，通过媒体查询@media 和自适应单位rem
 ---
 1、css主要利用sass预编译，所以先安装sass，然后sass基于Ruby，<br>
