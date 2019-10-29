@@ -38,11 +38,9 @@
 
 |分辨率|展示图|
 |---|---
-|`1920*1080分辨率`|![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_1.png)<br>
-![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_2.png)
-|`1366*768分辨率`|![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_3.png)<br>
-![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_4.png)<br>
-|`768*1024分辨率`|![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_5.png)<br>
+|`1920*1080分辨率`|![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_1.png)![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_2.png)
+|`1366*768分辨率`|![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_3.png)![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_4.png)
+|`768*1024分辨率`|![static/image](https://github.com/HilaryHA/webPractice/blob/master/static/image/wp_5.png)
 
   
 *****
